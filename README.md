@@ -2,7 +2,7 @@
 
 
 
-# [Project Name] 🎯
+# SAMOSA SANCTITY INDEX 🎯
 
 
 ## Basic Details
@@ -10,9 +10,7 @@
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Malavika Sudhi - Govt Model Engineering College
 
 ### Project Description
 [2-3 lines about what your project does]
