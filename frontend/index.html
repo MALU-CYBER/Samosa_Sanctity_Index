@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Samosa Sanctity Index</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="world">
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <section class="scene intro-scene active" id="introScene">
+
+        <div class="intro-grain"></div>
+
+        <div class="floating-shape shape-one"></div>
+        <div class="floating-shape shape-two"></div>
+        <div class="floating-shape shape-three"></div>
+
+        <div class="intro-copy">
+            <div class="tiny-label">A COMPLETELY SERIOUS INVESTIGATION</div>
+        </div>
+
+        <!-- MASCOT -->
+        <div class="mascot-wrap intro-mascot" id="introMascot">
+
+            <div class="mascot-shadow"></div>
+
+            <div class="mascot">
+
+                <div class="mascot-body">
+
+                    <div class="pastry-fold"></div>
+                    <div class="pastry-fold fold-two"></div>
+
+                    <div class="face">
+
+                        <div class="eyebrow eyebrow-left"></div>
+                        <div class="eyebrow eyebrow-right"></div>
+
+                        <div class="eye eye-left">
+                            <span></span>
+                        </div>
+
+                        <div class="eye eye-right">
+                            <span></span>
+                        </div>
+
+                        <div class="blush blush-left"></div>
+                        <div class="blush blush-right"></div>
+
+                        <div class="mouth"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="arm arm-left"></div>
+                <div class="arm arm-right"></div>
+
+                <div class="foot foot-left"></div>
+                <div class="foot foot-right"></div>
+
+            </div>
+
+            <div class="speech-bubble intro-bubble" id="introBubble">
+                Have you ever wondered if you're... somewhat geometrically perfect?
+            </div>
+
+        </div>
+
+        <div class="intro-cta">
+            <div class="cta-caption">THE QUESTION IS IMPORTANT.</div>
+
+            <button class="find-button" id="findButton">
+                <span>LET'S FIND OUT</span>
+                <i></i>
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LAB / UPLOAD
+    ====================================================== -->
+
+    <section class="scene lab-scene" id="labScene">
+
+        <div class="lab-background">
+            <div class="grid-lines"></div>
+            <div class="lab-orb orb-a"></div>
+            <div class="lab-orb orb-b"></div>
+        </div>
+
+        <header class="lab-header">
+
+            <div>
+                <div class="eyebrow-label">THE SAMOSA LABORATORY</div>
+
+                <h1>
+                    SAMOSA
+                    <span>SANCTITY</span>
+                    INDEX
+                </h1>
+            </div>
+
+            <div class="header-stamp">
+                <span>STATUS</span>
+                <strong>ACCEPTING SPECIMENS</strong>
+            </div>
+
+        </header>
+
+
+        <div class="lab-content">
+
+            <div class="lab-introduction">
+
+                <div class="handwritten">
+                    Welcome to the investigation.
+                </div>
+
+                <p>
+                    We are going to compare your samosa against a
+                    suspiciously precise idea of geometric perfection.
+                </p>
+
+                <div class="measurement-list">
+
+                    <div>
+                        <span>01</span>
+                        <strong>ANGLES</strong>
+                        <small>Are the corners behaving?</small>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <strong>SIDES</strong>
+                        <small>Are the proportions respectable?</small>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <strong>SYMMETRY</strong>
+                        <small>Are both sides friends?</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SPECIMEN AREA -->
+            <div class="specimen-zone">
+
+                <div class="specimen-label">
+                    <span>SPECIMEN 001</span>
+                    <i></i>
+                    <span>AWAITING SAMOSA</span>
+                </div>
+
+                <div class="specimen-box" id="specimenBox">
+
+                    <div class="specimen-corner corner-tl"></div>
+                    <div class="specimen-corner corner-tr"></div>
+                    <div class="specimen-corner corner-bl"></div>
+                    <div class="specimen-corner corner-br"></div>
+
+                    <div class="empty-specimen" id="emptySpecimen">
+
+                        <div class="plate-ring"></div>
+
+                        <h2>PRESENT YOUR SAMOSA</h2>
+
+                        <p>
+                            Place a photograph here.
+                            The tribunal awaits.
+                        </p>
+
+                        <label class="upload-button" for="fileInput">
+                            CHOOSE SPECIMEN
+                        </label>
+
+                        <input
+                            type="file"
+                            id="fileInput"
+                            accept="image/*"
+                            hidden
+                        >
+
+                    </div>
+
+
+                    <div class="preview-area" id="previewArea">
+
+                        <img id="previewImage" alt="Uploaded samosa">
+
+                        <div class="preview-overlay">
+                            <span>SPECIMEN ACQUIRED</span>
+                            <small id="fileName">image.jpg</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MASCOT OUTSIDE BOX -->
+                <div class="mascot-guide" id="labMascot">
+
+                    <div class="mascot lab-character">
+
+                        <div class="mascot-body">
+
+                            <div class="pastry-fold"></div>
+                            <div class="pastry-fold fold-two"></div>
+
+                            <div class="face">
+
+                                <div class="eyebrow eyebrow-left"></div>
+                                <div class="eyebrow eyebrow-right"></div>
+
+                                <div class="eye eye-left">
+                                    <span></span>
+                                </div>
+
+                                <div class="eye eye-right">
+                                    <span></span>
+                                </div>
+
+                                <div class="blush blush-left"></div>
+                                <div class="blush blush-right"></div>
+
+                                <div class="mouth"></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="arm arm-left"></div>
+                        <div class="arm arm-right"></div>
+
+                        <div class="foot foot-left"></div>
+                        <div class="foot foot-right"></div>
+
+                    </div>
+
+                    <div class="speech-bubble lab-bubble" id="labBubble">
+                        Hmm. I hope you brought a good one.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="lab-footer">
+
+            <button class="examine-button" id="examineButton" disabled>
+                <span>BEGIN EXAMINATION</span>
+                <i>→</i>
+            </button>
+
+            <div class="footer-note">
+                <span class="status-dot"></span>
+                COMPUTER VISION READY
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ANALYSIS
+    ====================================================== -->
+
+    <section class="scene analysis-scene" id="analysisScene">
+
+        <div class="analysis-background">
+            <div class="analysis-grid"></div>
+        </div>
+
+        <div class="analysis-top">
+
+            <div>
+                <div class="eyebrow-label">LIVE SPECIMEN EXAMINATION</div>
+                <h1>WE ARE TAKING THIS <em>VERY</em> SERIOUSLY.</h1>
+            </div>
+
+            <div class="analysis-status">
+                <span class="status-dot"></span>
+                <span id="analysisStatus">OBSERVING...</span>
+            </div>
+
+        </div>
+
+
+        <div class="analysis-layout">
+
+            <div class="analysis-specimen">
+
+                <div class="scan-frame">
+
+                    <img id="analysisImage" alt="Specimen under analysis">
+
+                    <div class="scan-line"></div>
+
+                    <div class="scan-corner scan-tl"></div>
+                    <div class="scan-corner scan-tr"></div>
+                    <div class="scan-corner scan-bl"></div>
+                    <div class="scan-corner scan-br"></div>
+
+                    <div class="scan-tag">
+                        <span>SPECIMEN</span>
+                        <strong>UNDER OBSERVATION</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="analysis-console">
+
+                <div class="console-header">
+                    <span>THE THINGS WE ARE THINKING ABOUT</span>
+                    <span id="analysisCounter">01 / 07</span>
+                </div>
+
+                <div class="console-message" id="consoleMessage">
+                    THE LITTLE TRIANGLE HAS ENTERED THE ROOM.
+                </div>
+
+                <div class="console-lines">
+
+                    <div class="console-line" id="lineShape">
+                        <span>01</span>
+                        <b>SHAPE</b>
+                        <i>waiting</i>
+                    </div>
+
+                    <div class="console-line" id="lineCorners">
+                        <span>02</span>
+                        <b>CORNERS</b>
+                        <i>waiting</i>
+                    </div>
+
+                    <div class="console-line" id="lineAngles">
+                        <span>03</span>
+                        <b>ANGLES</b>
+                        <i>waiting</i>
+                    </div>
+
+                    <div class="console-line" id="lineSides">
+                        <span>04</span>
+                        <b>SIDES</b>
+                        <i>waiting</i>
+                    </div>
+
+                    <div class="console-line" id="lineSymmetry">
+                        <span>05</span>
+                        <b>SYMMETRY</b>
+                        <i>waiting</i>
+                    </div>
+
+                    <div class="console-line" id="lineVerdict">
+                        <span>06</span>
+                        <b>VERDICT</b>
+                        <i>waiting</i>
+                    </div>
+
+                </div>
+
+
+                <div class="analysis-mascot">
+
+                    <div class="mascot mini-character">
+
+                        <div class="mascot-body">
+
+                            <div class="pastry-fold"></div>
+                            <div class="pastry-fold fold-two"></div>
+
+                            <div class="face">
+
+                                <div class="eyebrow eyebrow-left"></div>
+                                <div class="eyebrow eyebrow-right"></div>
+
+                                <div class="eye eye-left">
+                                    <span></span>
+                                </div>
+
+                                <div class="eye eye-right">
+                                    <span></span>
+                                </div>
+
+                                <div class="blush blush-left"></div>
+                                <div class="blush blush-right"></div>
+
+                                <div class="mouth"></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="arm arm-left"></div>
+                        <div class="arm arm-right"></div>
+
+                        <div class="foot foot-left"></div>
+                        <div class="foot foot-right"></div>
+
+                    </div>
+
+                    <div class="speech-bubble analysis-bubble" id="analysisBubble">
+                        That side is giving me a look.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RESULTS
+    ====================================================== -->
+
+    <section class="scene result-scene" id="resultScene">
+
+        <div class="result-background">
+            <div class="result-glow"></div>
+            <div class="result-orbit orbit-one"></div>
+            <div class="result-orbit orbit-two"></div>
+        </div>
+
+
+        <!-- SUCCESS -->
+        <div class="result-content" id="successResult">
+
+            <div class="result-kicker">
+                <span class="status-dot"></span>
+                INVESTIGATION COMPLETE
+            </div>
+
+            <div class="score-area">
+
+                <div class="score-label">
+                    SAMOSA SANCTITY
+                </div>
+
+                <div class="score">
+                    <span id="scoreNumber">0</span>
+                    <small>%</small>
+                </div>
+
+                <div class="score-rule"></div>
+
+                <h1 id="verdictTitle">
+                    THE CHOSEN SAMOSA
+                </h1>
+
+                <p id="verdictMessage">
+                    Geometry this disciplined is frankly suspicious.
+                </p>
+
+                <div class="congratulations" id="congratulations">
+                    CONGRATULATIONS.
+                </div>
+
+            </div>
+
+
+            <!-- CORE METRICS + GEOMETRY -->
+            <div class="result-lower">
+
+                <div class="metrics">
+
+                    <div class="metric">
+
+                        <div class="metric-top">
+                            <span>ANGLE CONFORMITY</span>
+                            <strong id="angleScore">0%</strong>
+                        </div>
+
+                        <div class="metric-bar">
+                            <i id="angleBar"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <div class="metric-top">
+                            <span>SIDE CONFORMITY</span>
+                            <strong id="sideScore">0%</strong>
+                        </div>
+
+                        <div class="metric-bar">
+                            <i id="sideBar"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <div class="metric-top">
+                            <span>SYMMETRY</span>
+                            <strong id="symmetryScore">0%</strong>
+                        </div>
+
+                        <div class="metric-bar">
+                            <i id="symmetryBar"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="geometry-card">
+
+                    <div class="geometry-heading">
+                        <span>MEASURED GEOMETRY</span>
+                        <small>actual specimen values</small>
+                    </div>
+
+                    <div class="geometry-diagram">
+
+                        <div class="triangle-drawing">
+                            <div class="triangle-shape"></div>
+
+                            <span class="angle-label apex-label" id="apexAngle">
+                                70°
+                            </span>
+
+                            <span class="angle-label left-angle" id="leftAngle">
+                                55°
+                            </span>
+
+                            <span class="angle-label right-angle" id="rightAngle">
+                                55°
+                            </span>
+
+                        </div>
+
+                        <div class="side-values">
+
+                            <div>
+                                <span>LEFT</span>
+                                <strong id="leftSide">—</strong>
+                            </div>
+
+                            <div>
+                                <span>RIGHT</span>
+                                <strong id="rightSide">—</strong>
+                            </div>
+
+                            <div>
+                                <span>BASE</span>
+                                <strong id="baseSide">—</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SSI BREAKDOWN -->
+            <div class="result-breakdown">
+
+                <div class="pie-panel">
+
+                    <div class="ssi-pie" id="ssiPie">
+
+                        <div class="ssi-pie-center">
+                            <strong id="pieScore">0%</strong>
+                            <span>FINAL SSI</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="breakdown-info">
+
+                    <div class="breakdown-heading">
+                        HOW THE SSI IS COMPOSED
+                    </div>
+
+                    <p class="breakdown-intro">
+                        The final score is built from the three measured
+                        conformity scores using their fixed weights.
+                        The pie shows the actual contribution of each
+                        component to this specimen's final SSI.
+                    </p>
+
+                    <div class="breakdown-row">
+
+                        <span class="breakdown-dot angle-dot"></span>
+
+                        <div>
+                            <strong>ANGLE CONFORMITY</strong>
+                            <small>35% of final SSI</small>
+                        </div>
+
+                        <strong id="angleContribution">—</strong>
+
+                    </div>
+
+
+                    <div class="breakdown-row">
+
+                        <span class="breakdown-dot side-dot"></span>
+
+                        <div>
+                            <strong>SIDE CONFORMITY</strong>
+                            <small>35% of final SSI</small>
+                        </div>
+
+                        <strong id="sideContribution">—</strong>
+
+                    </div>
+
+
+                    <div class="breakdown-row">
+
+                        <span class="breakdown-dot symmetry-dot"></span>
+
+                        <div>
+                            <strong>SYMMETRY</strong>
+                            <small>30% of final SSI</small>
+                        </div>
+
+                        <strong id="symmetryContribution">—</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DETECTION EVIDENCE -->
+            <div class="evidence-card">
+
+                <div class="evidence-heading">
+                    <span>DETECTION EVIDENCE</span>
+                    <small>computer vision output</small>
+                </div>
+
+                <div class="evidence-grid">
+
+                    <div class="evidence-item">
+                        <span>DETECTION CONFIDENCE</span>
+                        <strong id="detectionConfidence">—</strong>
+                    </div>
+
+                    <div class="evidence-item">
+                        <span>COLOR SCORE</span>
+                        <strong id="colorEvidence">—</strong>
+                    </div>
+
+                    <div class="evidence-item">
+                        <span>SHAPE SCORE</span>
+                        <strong id="shapeEvidence">—</strong>
+                    </div>
+
+                    <div class="evidence-item">
+                        <span>TRIANGLE IDENTITY</span>
+                        <strong id="triangleEvidence">—</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLANATION -->
+            <div class="explanation">
+
+                <div class="explanation-heading">
+                    HOW THE VERDICT WAS REACHED
+                </div>
+
+                <p>
+                    <strong>ANGLE CONFORMITY</strong> —
+                    How close are the corners to the ideal samosa shape?
+                    The three corners are compared with the chosen ideal angles:
+                    70° at the tip and 55° at each base corner.
+                    Closer angles receive a higher score.
+                </p>
+
+                <p>
+                    <strong>SIDE CONFORMITY</strong> —
+                    Are the sides in the right proportions?
+                    The measured side lengths are compared with the proportions
+                    expected from the ideal triangle.
+                </p>
+
+                <p>
+                    <strong>SYMMETRY</strong> —
+                    Do the two sloping sides agree with each other?
+                    The closer they are in length, the more symmetrical the specimen is.
+                </p>
+
+                <p>
+                    <strong>FINAL SSI</strong> —
+                    So... how geometrically samosa is this samosa?
+                    The final score combines angle conformity (35%),
+                    side conformity (35%), and symmetry (30%).
+                </p>
+
+                <div class="weakest-metric" id="weakestMetric"></div>
+
+            </div>
+
+
+            <div class="result-mascot">
+
+                <div class="mascot result-character">
+
+                    <div class="mascot-body">
+
+                        <div class="pastry-fold"></div>
+                        <div class="pastry-fold fold-two"></div>
+
+                        <div class="face">
+
+                            <div class="eyebrow eyebrow-left"></div>
+                            <div class="eyebrow eyebrow-right"></div>
+
+                            <div class="eye eye-left">
+                                <span></span>
+                            </div>
+
+                            <div class="eye eye-right">
+                                <span></span>
+                            </div>
+
+                            <div class="blush blush-left"></div>
+                            <div class="blush blush-right"></div>
+
+                            <div class="mouth"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="arm arm-left"></div>
+                    <div class="arm arm-right"></div>
+
+                    <div class="foot foot-left"></div>
+                    <div class="foot foot-right"></div>
+
+                </div>
+
+                <div class="speech-bubble result-bubble" id="resultBubble">
+                    Oh. OH. We did it.
+                </div>
+
+            </div>
+
+
+            <button class="again-button" id="againButton">
+                EXAMINE ANOTHER SAMOSA
+                <span>↗</span>
+            </button>
+
+        </div>
+
+
+        <!-- NON SAMOSA -->
+        <div class="rejection-content" id="rejectionResult">
+
+            <div class="rejection-symbol">?</div>
+
+            <div class="result-kicker">
+                SPECIMEN STATUS
+            </div>
+
+            <h1 id="rejectionTitle">
+                SPECIMEN REJECTED
+            </h1>
+
+            <p id="rejectionMessage">
+                The evidence does not meet the requirements for samosa status.
+            </p>
+
+            <div class="rejection-mascot">
+
+                <div class="mascot sad-character">
+
+                    <div class="mascot-body">
+
+                        <div class="pastry-fold"></div>
+                        <div class="pastry-fold fold-two"></div>
+
+                        <div class="face">
+
+                            <div class="eyebrow eyebrow-left"></div>
+                            <div class="eyebrow eyebrow-right"></div>
+
+                            <div class="eye eye-left">
+                                <span></span>
+                            </div>
+
+                            <div class="eye eye-right">
+                                <span></span>
+                            </div>
+
+                            <div class="blush blush-left"></div>
+                            <div class="blush blush-right"></div>
+
+                            <div class="mouth"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="arm arm-left"></div>
+                    <div class="arm arm-right"></div>
+
+                    <div class="foot foot-left"></div>
+                    <div class="foot foot-right"></div>
+
+                </div>
+
+                <div class="speech-bubble rejection-bubble" id="rejectionBubble">
+                    I thought we had something.
+                </div>
+
+            </div>
+
+            <button class="again-button" id="retryButton">
+                TRY ANOTHER SPECIMEN
+                <span>↗</span>
+            </button>
+
+        </div>
+
+
+        <!-- PROFILE UNCOOPERATIVE -->
+        <div class="profile-content" id="profileResult">
+
+            <div class="profile-icon">△</div>
+
+            <div class="result-kicker">
+                SAMOSA CONFIRMED
+            </div>
+
+            <h1>GEOMETRY UNAVAILABLE</h1>
+
+            <p id="profileMessage">
+                This is definitely a samosa.
+                Unfortunately, it has chosen a deeply inconvenient angle.
+            </p>
+
+            <div class="profile-mascot">
+
+                <div class="mascot concerned-character">
+
+                    <div class="mascot-body">
+
+                        <div class="pastry-fold"></div>
+                        <div class="pastry-fold fold-two"></div>
+
+                        <div class="face">
+
+                            <div class="eyebrow eyebrow-left"></div>
+                            <div class="eyebrow eyebrow-right"></div>
+
+                            <div class="eye eye-left">
+                                <span></span>
+                            </div>
+
+                            <div class="eye eye-right">
+                                <span></span>
+                            </div>
+
+                            <div class="blush blush-left"></div>
+                            <div class="blush blush-right"></div>
+
+                            <div class="mouth"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="arm arm-left"></div>
+                    <div class="arm arm-right"></div>
+
+                    <div class="foot foot-left"></div>
+                    <div class="foot foot-right"></div>
+
+                </div>
+
+                <div class="speech-bubble profile-bubble">
+                    Please rotate me. I cannot work under these conditions.
+                </div>
+
+            </div>
+
+            <button class="again-button" id="profileRetryButton">
+                TRY ANOTHER ANGLE
+                <span>↗</span>
+            </button>
+
+        </div>
+
+
+        <!-- ERROR -->
+        <div class="profile-content" id="errorResult">
+
+            <div class="profile-icon">!</div>
+
+            <div class="result-kicker">
+                THE LAB HAS A PROBLEM
+            </div>
+
+            <h1>THE SAMOSA REFUSED TO COOPERATE.</h1>
+
+            <p id="errorMessage">
+                Something went wrong while examining the specimen.
+            </p>
+
+            <button class="again-button" id="errorRetryButton">
+                TRY AGAIN
+                <span>↗</span>
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
